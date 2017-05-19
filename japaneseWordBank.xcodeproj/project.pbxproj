@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB27074A1ECEC62500346390 /* filteredVocabList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2707491ECEC62500346390 /* filteredVocabList.swift */; };
 		BBA5EEBA1ECDFD8100FC65AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EEB91ECDFD8100FC65AF /* AppDelegate.swift */; };
 		BBA5EEBF1ECDFD8100FC65AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA5EEBD1ECDFD8100FC65AF /* Main.storyboard */; };
 		BBA5EEC21ECDFD8100FC65AF /* japaneseWordBank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EEC01ECDFD8100FC65AF /* japaneseWordBank.xcdatamodeld */; };
@@ -14,13 +15,14 @@
 		BBA5EEC71ECDFD8100FC65AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA5EEC51ECDFD8100FC65AF /* LaunchScreen.storyboard */; };
 		BBA5EECF1ECE016D00FC65AF /* globalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EECE1ECE016D00FC65AF /* globalVariable.swift */; };
 		BBA5EED11ECE02EB00FC65AF /* VocabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EED01ECE02EB00FC65AF /* VocabTableViewController.swift */; };
-		BBA5EED31ECE053200FC65AF /* vocabTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EED21ECE053200FC65AF /* vocabTuple.swift */; };
+		BBA5EED31ECE053200FC65AF /* vocabList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EED21ECE053200FC65AF /* vocabList.swift */; };
 		BBA5EED51ECE0C5C00FC65AF /* vocabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EED41ECE0C5C00FC65AF /* vocabTableViewCell.swift */; };
 		BBA5EED71ECE167700FC65AF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EED61ECE167700FC65AF /* HomeController.swift */; };
 		BBA5EEDB1ECE1BB500FC65AF /* SelectionMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EEDA1ECE1BB500FC65AF /* SelectionMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB2707491ECEC62500346390 /* filteredVocabList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filteredVocabList.swift; sourceTree = "<group>"; };
 		BBA5EEB61ECDFD8100FC65AF /* japaneseWordBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = japaneseWordBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA5EEB91ECDFD8100FC65AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBA5EEBE1ECDFD8100FC65AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,7 +32,7 @@
 		BBA5EEC81ECDFD8100FC65AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBA5EECE1ECE016D00FC65AF /* globalVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = globalVariable.swift; sourceTree = "<group>"; };
 		BBA5EED01ECE02EB00FC65AF /* VocabTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocabTableViewController.swift; sourceTree = "<group>"; };
-		BBA5EED21ECE053200FC65AF /* vocabTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vocabTuple.swift; sourceTree = "<group>"; };
+		BBA5EED21ECE053200FC65AF /* vocabList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vocabList.swift; sourceTree = "<group>"; };
 		BBA5EED41ECE0C5C00FC65AF /* vocabTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vocabTableViewCell.swift; sourceTree = "<group>"; };
 		BBA5EED61ECE167700FC65AF /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		BBA5EEDA1ECE1BB500FC65AF /* SelectionMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionMenuController.swift; sourceTree = "<group>"; };
@@ -71,7 +73,8 @@
 				BBA5EED61ECE167700FC65AF /* HomeController.swift */,
 				BBA5EED01ECE02EB00FC65AF /* VocabTableViewController.swift */,
 				BBA5EED41ECE0C5C00FC65AF /* vocabTableViewCell.swift */,
-				BBA5EED21ECE053200FC65AF /* vocabTuple.swift */,
+				BBA5EED21ECE053200FC65AF /* vocabList.swift */,
+				BB2707491ECEC62500346390 /* filteredVocabList.swift */,
 				BBA5EECE1ECE016D00FC65AF /* globalVariable.swift */,
 				BBA5EEBD1ECDFD8100FC65AF /* Main.storyboard */,
 				BBA5EEC31ECDFD8100FC65AF /* Assets.xcassets */,
@@ -155,8 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB27074A1ECEC62500346390 /* filteredVocabList.swift in Sources */,
 				BBA5EEC21ECDFD8100FC65AF /* japaneseWordBank.xcdatamodeld in Sources */,
-				BBA5EED31ECE053200FC65AF /* vocabTuple.swift in Sources */,
+				BBA5EED31ECE053200FC65AF /* vocabList.swift in Sources */,
 				BBA5EED71ECE167700FC65AF /* HomeController.swift in Sources */,
 				BBA5EECF1ECE016D00FC65AF /* globalVariable.swift in Sources */,
 				BBA5EEBA1ECDFD8100FC65AF /* AppDelegate.swift in Sources */,

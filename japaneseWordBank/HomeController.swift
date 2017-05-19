@@ -12,12 +12,39 @@ protocol Homedelegate {
     func changeTable()
 }
 
-class HomeController: UIViewController {
+class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     var delegate: Homedelegate!
+    
+    @IBOutlet weak var selectionBox: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        //retrive data
+        let userDefaults = UserDefaults.standard
+        
+        //TestData
+//        wholeArray.addVocab(vocab: testTuple1)
+//        wholeArray.addVocab(vocab: testTuple2)
+//        wholeArray.addVocab(vocab: testTuple3)
+//        wholeArray.addVocab(vocab: testTuple4)
+//        wholeArray.addVocab(vocab: testTuple5)
+        
+        if let data = userDefaults.object(forKey: "wholeArray") as? NSData {
+            let unarc = NSKeyedUnarchiver(forReadingWith: data as Data)
+            unarc.setClass(wholeArray.self, forClassName: "wholeArray")
+            let wholeArray = unarc.decodeObject(forKey: "root")
+        }
+
+        
+        selectionRegion += wholeArray.getRegionList()
+        filteredArray.update(vocabList: wholeArray,filteredByRegion: selectionRegion[0])
+        //Create PickerView
+        let dropDownMenu = UIPickerView()
+        dropDownMenu.delegate = self
+        selectionBox.inputView = dropDownMenu
+        
+        //StoreDataPlay
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +52,29 @@ class HomeController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //selection menu
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return selectionRegion.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return selectionRegion[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectionBox.text = selectionRegion[row]
+        //update table
+        filteredArray.update(vocabList: wholeArray,filteredByRegion: selectionRegion[row])
+        filteredArray.printArray()
+        delegate.changeTable()
+        self.view.endEditing(true)
+    }
+    
+    //connect to table
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "segueToTable") {
             let tableVC = segue.destination  as! VocabTableViewController
@@ -32,10 +82,5 @@ class HomeController: UIViewController {
             self.delegate = tableVC
         }
     }
-    
-    @IBAction func testBtn(_ sender: UIButton) {
-        delegate.changeTable()
-    }
-}
 
-//http://stackoverflow.com/questions/40715210/swift-3-call-function-from-parent-viewcontroller
+}

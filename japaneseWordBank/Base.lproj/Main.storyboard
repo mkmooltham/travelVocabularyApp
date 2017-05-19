@@ -24,34 +24,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxF-yx-DL8">
-                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                                <rect key="frame" x="0.0" y="112" width="375" height="555"/>
                                 <connections>
                                     <segue destination="AcR-CV-3ba" kind="embed" identifier="segueToTable" id="vVv-rj-I2L"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pga-WL-hwN">
-                                <rect key="frame" x="129" y="107" width="117" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.63137254899999995" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3W1-mE-x4F"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="地區" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="evK-0f-YXq">
+                                <rect key="frame" x="0.0" y="72" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aYJ-UQ-0lR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Pga-WL-hwN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="3CQ-pP-cDQ"/>
-                            <constraint firstItem="yxF-yx-DL8" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="G7N-1V-7dV"/>
+                            <constraint firstItem="evK-0f-YXq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="BPN-WS-kvf"/>
                             <constraint firstItem="yxF-yx-DL8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="eef-3V-WX2"/>
+                            <constraint firstItem="yxF-yx-DL8" firstAttribute="top" secondItem="evK-0f-YXq" secondAttribute="bottom" constant="10" id="gXb-Lp-GDu"/>
+                            <constraint firstItem="evK-0f-YXq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="jfF-sX-B9W"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yxF-yx-DL8" secondAttribute="bottom" id="pFp-1e-Iz6"/>
+                            <constraint firstItem="evK-0f-YXq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vJU-pr-w0Q"/>
                             <constraint firstItem="yxF-yx-DL8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xKq-xX-OZy"/>
-                            <constraint firstItem="Pga-WL-hwN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xNU-Fe-BWq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5kB-Wd-CfS"/>
+                    <connections>
+                        <outlet property="selectionBox" destination="evK-0f-YXq" id="1O1-fd-5cf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,7 +64,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="Table" id="AcR-CV-3ba" customClass="VocabTableViewController" customModule="japaneseWordBank" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5u6-no-Mkt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
