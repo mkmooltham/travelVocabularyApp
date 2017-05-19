@@ -31,8 +31,8 @@ class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         if let data = userDefaults.object(forKey: "wholeArray") as? NSData {
             let unarc = NSKeyedUnarchiver(forReadingWith: data as Data)
-            unarc.setClass(wholeArray.self, forClassName: "wholeArray")
-            let wholeArray = unarc.decodeObject(forKey: "root")
+            unarc.setClass(VocabList.self, forClassName: "wholeArray")
+            wholeArray = unarc.decodeObject(forKey: "root") as! VocabList
         }
 
         
