@@ -44,7 +44,6 @@ class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         selectionRegion += wholeArray.getRegionList()
         filteredArray.update(vocabList: wholeArray,filteredByRegion: selectionRegion[0], filteredByType: selectionType[0])
-        filteredArray.printArray()
         //Create PickerView
         dropDownMenu.delegate = self
         selectionBox.inputView = dropDownMenu
@@ -100,7 +99,6 @@ class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         filteredArray.update(vocabList: wholeArray,filteredByRegion: selectionRegion[selectedCityID], filteredByType: selectionType[selectedTypeID])
         //update table
-        filteredArray.printArray()
         delegate.changeTable()
         
     }

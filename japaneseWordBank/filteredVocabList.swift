@@ -52,6 +52,7 @@ class FilteredVocabList{
     
     func printArray(){
         for item in self.arr{
+            print("\(item.vocab.kanji)  \(item.vocab.region)  \(item.vocab.type)  \(item.index)")
         }
     }
 }

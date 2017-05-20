@@ -28,7 +28,6 @@ class VocabTableViewController: UITableViewController, Homedelegate {
     //Control function
     func changeTable(){
         self.tableView.reloadData()
-        print("Changed Table!")
     }
     
     // MARK: - Table view data source
@@ -51,7 +50,6 @@ class VocabTableViewController: UITableViewController, Homedelegate {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            print("Deleted")
             
             //remove in wholeArray
             wholeArray.arr.remove(at: filteredArray.arr[indexPath.row].index)
@@ -67,7 +65,6 @@ class VocabTableViewController: UITableViewController, Homedelegate {
             }
             //remove in filteredArray
             filteredArray.update(vocabList: wholeArray, filteredByRegion: selectionRegion[selectedCityID], filteredByType: selectionType[selectedTypeID])
-            filteredArray.printArray()
             changeTable()
             
         }

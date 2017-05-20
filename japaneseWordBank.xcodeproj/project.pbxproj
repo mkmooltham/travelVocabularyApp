@@ -19,7 +19,6 @@
 		BBA5EED31ECE053200FC65AF /* vocabList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EED21ECE053200FC65AF /* vocabList.swift */; };
 		BBA5EED51ECE0C5C00FC65AF /* vocabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EED41ECE0C5C00FC65AF /* vocabTableViewCell.swift */; };
 		BBA5EED71ECE167700FC65AF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EED61ECE167700FC65AF /* HomeController.swift */; };
-		BBA5EEDB1ECE1BB500FC65AF /* SelectionMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EEDA1ECE1BB500FC65AF /* SelectionMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		BBA5EED21ECE053200FC65AF /* vocabList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vocabList.swift; sourceTree = "<group>"; };
 		BBA5EED41ECE0C5C00FC65AF /* vocabTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vocabTableViewCell.swift; sourceTree = "<group>"; };
 		BBA5EED61ECE167700FC65AF /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		BBA5EEDA1ECE1BB500FC65AF /* SelectionMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionMenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				BBA5EEB91ECDFD8100FC65AF /* AppDelegate.swift */,
-				BBA5EEDA1ECE1BB500FC65AF /* SelectionMenuController.swift */,
 				BBA5EED61ECE167700FC65AF /* HomeController.swift */,
 				BBA5EED01ECE02EB00FC65AF /* VocabTableViewController.swift */,
 				BB298D251ECFF84200FD8E24 /* AddEventController.swift */,
@@ -170,7 +167,6 @@
 				BBA5EEBA1ECDFD8100FC65AF /* AppDelegate.swift in Sources */,
 				BBA5EED11ECE02EB00FC65AF /* VocabTableViewController.swift in Sources */,
 				BBA5EED51ECE0C5C00FC65AF /* vocabTableViewCell.swift in Sources */,
-				BBA5EEDB1ECE1BB500FC65AF /* SelectionMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

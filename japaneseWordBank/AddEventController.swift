@@ -106,7 +106,6 @@ class AddEventController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let newVocab = VocabTuple(japaneseTerm: hiragana, chineseTerm: kanji, city: city, locationType: type)
         wholeArray.addVocab(vocab: newVocab)
         //update on local storage
-        print("Added \(kanji) \(hiragana) \(city) \(type)")
         let userdefaults = UserDefaults.standard
         userdefaults.set(NSKeyedArchiver.archivedData(withRootObject: wholeArray), forKey: "wholeArray")
         delegate.updateTableFromAddEvent()
@@ -144,12 +143,10 @@ class AddEventController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             if(selectionRegion.count>1){
                 cityid = row+1
                 city = selectionRegion[cityid]
-                print("selected \(cityid) \(city)")
             }
         }else{
             typeid = row+1
             type = selectionType[typeid]
-            print("selected \(typeid) \(type)")
         }
     }
     
@@ -161,16 +158,13 @@ class AddEventController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBAction func add(_ sender: UIButton) {
         if(cityPicker.isHidden == false && (inputKanji.text! == "" || inputHiragana.text == "")){
-            print("case1")
             inputKanji.placeholder = "請勿漏空"
             inputHiragana.placeholder = "請勿漏空"
         }else if(cityPicker.isHidden == true && (inputKanji.text! == "" || inputHiragana.text! == "" || inputCity.text! == "") ){
-            print("case2")
             inputKanji.placeholder = "請勿漏空"
             inputHiragana.placeholder = "請勿漏空"
             inputCity.placeholder = "請勿漏空"
         }else{
-            print("adding...")
             inputKanji.placeholder = "請輸入中文"
             inputHiragana.placeholder = "請輸入外語"
             inputCity.placeholder = "請輸入城市"
