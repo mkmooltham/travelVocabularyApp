@@ -308,7 +308,7 @@
                         <outlet property="inputKanji" destination="JpR-mi-kHO" id="cU4-bq-zaL"/>
                         <outlet property="popUpBackground" destination="lmj-IU-QPY" id="bsw-Zn-O6n"/>
                         <outlet property="popUpBoard" destination="Vs9-Hb-8Ng" id="ZPn-BU-b7S"/>
-                        <outlet property="typPicker" destination="xWJ-P5-yA7" id="4Ny-az-Z9Q"/>
+                        <outlet property="typePicker" destination="xWJ-P5-yA7" id="s8S-25-3di"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51G-BE-Gxt" userLabel="First Responder" sceneMemberID="firstResponder"/>

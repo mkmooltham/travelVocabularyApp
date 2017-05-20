@@ -41,10 +41,8 @@ class FilteredVocabList{
         self.arr.removeAll()
         var count = 0
         for vocab in vocabList.arr {
-            print("\(vocab.kanji)")
             if(vocab.region==filteredByRegion || filteredByRegion==selectionRegion[0]){
                 if(vocab.type==filteredByType || filteredByType==selectionType[0]){
-                    print("append")
                 arr.append(FilteredVocabTuple(vocabTuple: vocab,indexValue: count))
                 }
             }
@@ -54,7 +52,6 @@ class FilteredVocabList{
     
     func printArray(){
         for item in self.arr{
-            print("\(item.vocab.kanji)  \(item.index)")
         }
     }
 }

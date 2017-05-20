@@ -12,12 +12,10 @@ protocol Homedelegate {
     func changeTable()
 }
 
-class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, AddEventDelegate{
+class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, AddEventDelegate, VocabTableDelegate{
     var delegate: Homedelegate!
     let dropDownMenu = UIPickerView()
     
-    var selectedCityID = 0
-    var selectedTypeID = 0
     
     @IBOutlet weak var selectionBox: UITextField!
     @IBOutlet weak var selectionBoxRight: UITextField!
@@ -111,6 +109,13 @@ class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.view.endEditing(true)
     }
     
+    func selectFilterRow(){
+        self.dropDownMenu.selectRow(selectedCityID, inComponent: 0, animated: false)
+        self.pickerView(self.dropDownMenu, didSelectRow: selectedCityID, inComponent: 0)
+        self.dropDownMenu.selectRow(selectedTypeID, inComponent: 1, animated: false)
+        self.pickerView(self.dropDownMenu, didSelectRow: selectedTypeID, inComponent: 1)
+    }
+    
     //Add Event
     @IBAction func addEvent(_ sender: UIButton) {
         let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddEvent") as! AddEventController
@@ -121,15 +126,12 @@ class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         popUpVC.didMove(toParentViewController: self)
     }
     
-    func updateSelectionFromAddEvent(cityid: Int){
+    func updateSelectionFromAddEvent(){
         self.dropDownMenu.reloadComponent(0)
     }
     
-    func updateTableFromAddEvent(cityid: Int, typeid: Int){
-        self.dropDownMenu.selectRow(cityid, inComponent: 0, animated: false)
-        self.pickerView(self.dropDownMenu, didSelectRow: cityid, inComponent: 0)
-        self.dropDownMenu.selectRow(typeid, inComponent: 1, animated: false)
-        self.pickerView(self.dropDownMenu, didSelectRow: typeid, inComponent: 1)
+    func updateTableFromAddEvent(){
+        selectFilterRow()
         delegate.changeTable()
     }
     
@@ -155,7 +157,9 @@ class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let tableVC = segue.destination  as! VocabTableViewController
             // Pass data to secondViewController before the transition
             self.delegate = tableVC
+            tableVC.delegate = self
         }
     }
+    
 
 }

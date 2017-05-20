@@ -74,6 +74,16 @@ class VocabList: NSObject, NSCoding{
         return regionArr
     }
     
+    func  containRegion(element: String)->Bool{
+        
+        for vocab in self.arr {
+            if(vocab.region == element){
+                return true
+            }
+        }
+        return false
+    }
+    
 }
 
 extension Array where Element:Equatable {

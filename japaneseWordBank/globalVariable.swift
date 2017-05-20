@@ -23,6 +23,9 @@ var selectionRegion = ["所有地區"]
 
 var selectionType = ["所有類型","景點","餐廳","車站","市區","城市"]
 
+var selectedCityID = 0
+var selectedTypeID = 0
+
 //hex color function
 func hexColor (hex:String) -> UIColor {
     var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()

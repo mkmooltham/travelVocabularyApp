@@ -8,15 +8,16 @@
 
 import UIKit
 
+protocol VocabTableDelegate {
+    func selectFilterRow()
+}
+
 class VocabTableViewController: UITableViewController, Homedelegate {
-    
-    
+    var delegate: VocabTableDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,9 +58,18 @@ class VocabTableViewController: UITableViewController, Homedelegate {
             //remove in local storage
             let userdefaults = UserDefaults.standard
             userdefaults.set(NSKeyedArchiver.archivedData(withRootObject: wholeArray), forKey: "wholeArray")
+            //remove in selection
+            if !wholeArray.containRegion(element: filteredArray.arr[indexPath.row].vocab.region) {
+                let deleteID = selectionRegion.index(of: filteredArray.arr[indexPath.row].vocab.region)
+                selectionRegion.remove(at: deleteID!)
+                selectedCityID = 0
+                delegate.selectFilterRow()
+            }
             //remove in filteredArray
-            filteredArray.arr.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            filteredArray.update(vocabList: wholeArray, filteredByRegion: selectionRegion[selectedCityID], filteredByType: selectionType[selectedTypeID])
+            filteredArray.printArray()
+            changeTable()
+            
         }
     }
 }
