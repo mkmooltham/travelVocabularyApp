@@ -43,11 +43,19 @@ class FilteredVocabList{
         for vocab in vocabList.arr {
             if(vocab.region==filteredByRegion || filteredByRegion==selectionRegion[0]){
                 if(vocab.type==filteredByType || filteredByType==selectionType[0]){
-                arr.append(FilteredVocabTuple(vocabTuple: vocab,indexValue: count))
+                self.arr.append(FilteredVocabTuple(vocabTuple: vocab,indexValue: count))
                 }
             }
             count = count+1
         }
+        self.arr.sort(by: { (o1: FilteredVocabTuple, o2: FilteredVocabTuple) -> Bool in
+            return o1.vocab.region == o2.vocab.region ?
+                (o1.vocab.type == o2.vocab.type ?
+                    o1.vocab.kanji<o2.vocab.kanji:
+                    o1.vocab.type<o2.vocab.type)
+                : (o1.vocab.region < o2.vocab.region)
+        })
+        
     }
     
     func printArray(){

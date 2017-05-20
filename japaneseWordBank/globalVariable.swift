@@ -21,7 +21,7 @@ var filteredArray = FilteredVocabList()
 
 var selectionRegion = ["所有地區"]
 
-var selectionType = ["所有類型","景點","餐廳","車站","市區","城市"]
+var selectionType = ["所有類型","景點","餐廳","產品","車站","路線","市區","城市","機場"]
 
 var selectedCityID = 0
 var selectedTypeID = 0
