@@ -52,7 +52,12 @@ class VocabTableViewController: UITableViewController, Homedelegate {
         if editingStyle == .delete {
             print("Deleted")
             
+            //remove in wholeArray
             wholeArray.arr.remove(at: filteredArray.arr[indexPath.row].index)
+            //remove in local storage
+            let userdefaults = UserDefaults.standard
+            userdefaults.set(NSKeyedArchiver.archivedData(withRootObject: wholeArray), forKey: "wholeArray")
+            //remove in filteredArray
             filteredArray.arr.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }

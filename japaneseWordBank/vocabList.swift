@@ -40,8 +40,8 @@ class VocabTuple: NSObject, NSCoding {
     func encode(with coder: NSCoder) {
         coder.encode(hiragana, forKey: "hiragana")
         coder.encode(kanji, forKey: "kanji")
-        coder.encode(hiragana, forKey: "region")
-        coder.encode(kanji, forKey: "type")
+        coder.encode(region, forKey: "region")
+        coder.encode(type, forKey: "type")
     }
     
 }

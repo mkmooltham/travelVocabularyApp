@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB27074A1ECEC62500346390 /* filteredVocabList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2707491ECEC62500346390 /* filteredVocabList.swift */; };
+		BB298D261ECFF84200FD8E24 /* AddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB298D251ECFF84200FD8E24 /* AddEventController.swift */; };
 		BBA5EEBA1ECDFD8100FC65AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EEB91ECDFD8100FC65AF /* AppDelegate.swift */; };
 		BBA5EEBF1ECDFD8100FC65AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA5EEBD1ECDFD8100FC65AF /* Main.storyboard */; };
 		BBA5EEC21ECDFD8100FC65AF /* japaneseWordBank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EEC01ECDFD8100FC65AF /* japaneseWordBank.xcdatamodeld */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		BB2707491ECEC62500346390 /* filteredVocabList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filteredVocabList.swift; sourceTree = "<group>"; };
+		BB298D251ECFF84200FD8E24 /* AddEventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventController.swift; sourceTree = "<group>"; };
 		BBA5EEB61ECDFD8100FC65AF /* japaneseWordBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = japaneseWordBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA5EEB91ECDFD8100FC65AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBA5EEBE1ECDFD8100FC65AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				BBA5EEDA1ECE1BB500FC65AF /* SelectionMenuController.swift */,
 				BBA5EED61ECE167700FC65AF /* HomeController.swift */,
 				BBA5EED01ECE02EB00FC65AF /* VocabTableViewController.swift */,
+				BB298D251ECFF84200FD8E24 /* AddEventController.swift */,
 				BBA5EED41ECE0C5C00FC65AF /* vocabTableViewCell.swift */,
 				BBA5EED21ECE053200FC65AF /* vocabList.swift */,
 				BB2707491ECEC62500346390 /* filteredVocabList.swift */,
@@ -160,6 +163,7 @@
 			files = (
 				BB27074A1ECEC62500346390 /* filteredVocabList.swift in Sources */,
 				BBA5EEC21ECDFD8100FC65AF /* japaneseWordBank.xcdatamodeld in Sources */,
+				BB298D261ECFF84200FD8E24 /* AddEventController.swift in Sources */,
 				BBA5EED31ECE053200FC65AF /* vocabList.swift in Sources */,
 				BBA5EED71ECE167700FC65AF /* HomeController.swift in Sources */,
 				BBA5EECF1ECE016D00FC65AF /* globalVariable.swift in Sources */,
