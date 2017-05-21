@@ -14,7 +14,7 @@ protocol VocabTableDelegate {
 
 class VocabTableViewController: UITableViewController, Homedelegate {
     var delegate: VocabTableDelegate!
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,12 +42,13 @@ class VocabTableViewController: UITableViewController, Homedelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! vocabTableViewCell
         
         cell.column1.text = filteredArray.arr[indexPath.row].vocab.kanji
-        cell.column2.text = filteredArray.arr[indexPath.row].vocab.hiragana
+        cell.pronunciation.setTitle(filteredArray.arr[indexPath.row].vocab.hiragana, for: .normal)
+        cell.pronunciation.titleLabel?.adjustsFontSizeToFitWidth = true;
+        cell.pronunciation.titleLabel?.minimumScaleFactor = 0.5;
 
         return cell
     }
-    
-    
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
@@ -66,7 +67,6 @@ class VocabTableViewController: UITableViewController, Homedelegate {
             //remove in filteredArray
             filteredArray.update(vocabList: wholeArray, filteredByRegion: selectionRegion[selectedCityID], filteredByType: selectionType[selectedTypeID])
             changeTable()
-            
         }
     }
 }

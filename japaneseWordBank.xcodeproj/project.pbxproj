@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BB27074A1ECEC62500346390 /* filteredVocabList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2707491ECEC62500346390 /* filteredVocabList.swift */; };
 		BB298D261ECFF84200FD8E24 /* AddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB298D251ECFF84200FD8E24 /* AddEventController.swift */; };
+		BB3E00181ED1D54300CF662A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3E00171ED1D54300CF662A /* AVFoundation.framework */; };
 		BBA5EEBA1ECDFD8100FC65AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EEB91ECDFD8100FC65AF /* AppDelegate.swift */; };
 		BBA5EEBF1ECDFD8100FC65AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA5EEBD1ECDFD8100FC65AF /* Main.storyboard */; };
 		BBA5EEC21ECDFD8100FC65AF /* japaneseWordBank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBA5EEC01ECDFD8100FC65AF /* japaneseWordBank.xcdatamodeld */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		BB2707491ECEC62500346390 /* filteredVocabList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filteredVocabList.swift; sourceTree = "<group>"; };
 		BB298D251ECFF84200FD8E24 /* AddEventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventController.swift; sourceTree = "<group>"; };
+		BB3E00171ED1D54300CF662A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BBA5EEB61ECDFD8100FC65AF /* japaneseWordBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = japaneseWordBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA5EEB91ECDFD8100FC65AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBA5EEBE1ECDFD8100FC65AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,17 +45,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB3E00181ED1D54300CF662A /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB3E00161ED1D54200CF662A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB3E00171ED1D54300CF662A /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BBA5EEAD1ECDFD8100FC65AF = {
 			isa = PBXGroup;
 			children = (
 				BBA5EEB81ECDFD8100FC65AF /* japaneseWordBank */,
 				BBA5EEB71ECDFD8100FC65AF /* Products */,
+				BB3E00161ED1D54200CF662A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

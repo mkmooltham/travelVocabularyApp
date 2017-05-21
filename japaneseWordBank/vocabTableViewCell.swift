@@ -7,12 +7,29 @@
 //
 
 import UIKit
+import AVFoundation
 
 class vocabTableViewCell: UITableViewCell {
-
+    
+    let  synthesizer = AVSpeechSynthesizer()
     
     @IBOutlet weak var column1: UILabel!
-    @IBOutlet weak var column2: UILabel!
+    @IBOutlet weak var pronunciation: UIButton!
+    
+    @IBAction func tapForSound(_ sender: Any) {
+        //text to speech
+        let  utterace = AVSpeechUtterance(string: (pronunciation.titleLabel?.text)!)
+        utterace.voice = AVSpeechSynthesisVoice(language: "ja-JP")
+        if((pronunciation.titleLabel?.text)!.characters.count>9){
+            utterace.rate = 0.3
+        }else{
+            utterace.rate = 0.4
+        }
+        
+        
+        
+        synthesizer.speak(utterace)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
