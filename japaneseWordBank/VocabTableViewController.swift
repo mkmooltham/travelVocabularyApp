@@ -31,7 +31,7 @@ class VocabTableViewController: UITableViewController, Homedelegate {
     }
     
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return filteredArray.arr.count
@@ -43,8 +43,11 @@ class VocabTableViewController: UITableViewController, Homedelegate {
         
         cell.column1.text = filteredArray.arr[indexPath.row].vocab.kanji
         cell.pronunciation.setTitle(filteredArray.arr[indexPath.row].vocab.hiragana, for: .normal)
-        cell.pronunciation.titleLabel?.adjustsFontSizeToFitWidth = true;
-        cell.pronunciation.titleLabel?.minimumScaleFactor = 0.5;
+        if(filteredArray.arr[indexPath.row].vocab.hiragana.characters.count > 10){
+            cell.pronunciation.titleLabel?.adjustsFontSizeToFitWidth = true
+            cell.pronunciation.titleLabel?.minimumScaleFactor = 0.5
+        }
+        
 
         return cell
     }

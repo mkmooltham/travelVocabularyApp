@@ -30,6 +30,10 @@
                                     <segue destination="AcR-CV-3ba" kind="embed" identifier="segueToTable" id="vVv-rj-I2L"/>
                                 </connections>
                             </containerView>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ohanami" translatesAutoresizingMaskIntoConstraints="NO" id="LEE-6j-Xa9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="地區" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="evK-0f-YXq">
                                 <rect key="frame" x="10" y="74" width="194.66666666666666" height="40"/>
                                 <constraints>
@@ -85,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.79999999999995" y="689.5052473763119"/>
+            <point key="canvasLocation" x="943.47826086956525" y="688.85869565217399"/>
         </scene>
         <!--Vocab Table View Controller-->
         <scene sceneID="OSi-bb-tJi">
@@ -105,13 +109,13 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJq-pE-dMV">
                                             <rect key="frame" x="0.0" y="1" width="207" height="43"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNE-zg-8gV">
                                             <rect key="frame" x="207" y="0.0" width="207" height="43.666666666666664"/>
-                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <state key="normal" title="Button">
                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                             </state>
@@ -344,5 +348,6 @@
     </scenes>
     <resources>
         <image name="addEvent" width="100" height="100"/>
+        <image name="ohanami" width="640" height="960"/>
     </resources>
 </document>
