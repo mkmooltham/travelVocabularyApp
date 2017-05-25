@@ -27,12 +27,14 @@ class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let userDefaults = UserDefaults.standard
         
         //TestData
+
+//        let testTuple0 = VocabTuple(japaneseTerm: "おおさか", chineseTerm: "大阪", city:"大阪", locationType: "城市")
+//        wholeArray.addVocab(vocab: testTuple0)
+//        let testTuple1 = VocabTuple(japaneseTerm: "こうべ", chineseTerm: "神戶", city:"神戶", locationType: "城市")
 //        wholeArray.addVocab(vocab: testTuple1)
+//        let testTuple2 = VocabTuple(japaneseTerm: "なら", chineseTerm: "奈良", city:"奈良", locationType: "城市")
 //        wholeArray.addVocab(vocab: testTuple2)
-//        wholeArray.addVocab(vocab: testTuple3)
-//        wholeArray.addVocab(vocab: testTuple4)
-//        wholeArray.addVocab(vocab: testTuple5)
-//        userDefaults.set(NSKeyedArchiver.archivedData(withRootObject: wholeArray), forKey: "wholeArray")
+//         userDefaults.set(NSKeyedArchiver.archivedData(withRootObject: wholeArray), forKey: "wholeArray")
         
         //get data from local storage
         if let data = userDefaults.object(forKey: "wholeArray") as? NSData {
@@ -40,6 +42,7 @@ class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             unarc.setClass(VocabList.self, forClassName: "wholeArray")
             wholeArray = unarc.decodeObject(forKey: "root") as! VocabList
         }
+        print("home whole length is \(wholeArray.arr.count)")
 
         
         selectionRegion += wholeArray.getRegionList()

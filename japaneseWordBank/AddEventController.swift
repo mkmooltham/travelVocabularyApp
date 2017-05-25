@@ -104,10 +104,13 @@ class AddEventController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         selectedTypeID = typeid
         
         let newVocab = VocabTuple(japaneseTerm: hiragana, chineseTerm: kanji, city: city, locationType: type)
+//        print("whole length is \(wholeArray.arr.count)")
         wholeArray.addVocab(vocab: newVocab)
+//        print("added whole length is \(wholeArray.arr.count)")
         //update on local storage
         let userdefaults = UserDefaults.standard
         userdefaults.set(NSKeyedArchiver.archivedData(withRootObject: wholeArray), forKey: "wholeArray")
+//        print("added to storage")
         delegate.updateTableFromAddEvent()
         
     }
